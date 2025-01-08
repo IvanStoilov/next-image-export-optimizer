@@ -48,7 +48,7 @@ async function downloadImage(url: string, filename: string, folder: string) {
 
       // Check for jpeg and change it to jpg if necessary
       if (imageFormat === "jpeg") {
-        imageFormat = "jpg";
+        imageFormat = filename.split(".").pop();
       }
 
       // Check if filename already has an extension that matches the image format
